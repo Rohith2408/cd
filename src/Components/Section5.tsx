@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import styles from "./Section5.module.css";
+import dropdownicon from '../Images/Section5/down.png'
 
 const Section5=()=>{
 
@@ -35,10 +36,13 @@ const Questioncontainer=(props:{q:string,a:string})=>{
 
     return(
         <div className={styles.qaWrapper}>
-            <button onClick={()=>setScale(scale==0?1:0)} className={styles.qWrapper}>
+            <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start",alignItems:"center"}}>
+                <button onClick={()=>setScale(scale==0?1:0)} className={styles.qWrapper}>
+                    <img src={dropdownicon} className={styles.dropdown} style={{transform:"rotate("+(scale==0)?"180deg":"0deg"+")"}}></img>
+                </button>
                 <p className={styles.question}>{props.q}</p>
-            </button>
-            <div className={styles.answerWrapper} style={{transform:"scale("+scale+")"}}>
+            </div>
+            <div className={styles.answerWrapper} style={{transform:"scaleX("+scale+")"}}>
                 <p className={styles.answer}>{props.a}</p>
             </div>
         </div>
