@@ -14,21 +14,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     background-position:center;
     background-size:100%
   }
 
   .bodyWrapper{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items:flex-start;
-    position: relative;
     flex-direction: column;
     box-sizing: border-box;
     background-position: center;
     background-size: cover;
-    position: relative;
   }
 
   .body{
@@ -36,6 +34,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
 
   .title{
@@ -48,15 +47,15 @@
 
   .text{
     margin: 0;
-    color: white;
+    color: black;
     text-align: center;
     font-family: var(--font-annie-use-your-telescope);
-    font-weight: 700;
+    font-weight: 900;
     max-width: 85%;
   }
 
   .titleWrapper{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -93,7 +92,6 @@
 
     .title{
         font-size: 60px;
-        color: white;
     }
 
     .text{
@@ -108,6 +106,17 @@
 
     .titleWrapper{
         border-radius: 40px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gridItem{
+        width:100px;
+        height:auto;
+        object-fit:contain;
     }
   }
 
@@ -130,7 +139,6 @@
 
     .title{
         font-size: 80px;
-        color: white;
     }
 
     .text{
@@ -145,6 +153,17 @@
 
     .titleWrapper{
         border-radius: 50px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gridItem{
+        width:165px;
+        height:auto;
+        object-fit:contain;
     }
   }
 
@@ -172,7 +191,6 @@
 
     .title{
         font-size: 120px;
-        color: white;
     }
 
     .text{
@@ -187,6 +205,18 @@
 
     .titleWrapper{
         border-radius: 60px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        border-radius: 50px;
+    }
+
+    .gridItem{
+        width:250px;
+        height:auto;
+        object-fit:contain;
     }
   }
 
@@ -212,7 +242,6 @@
 
     .title{
         font-size: 140px;
-        color: white;
     }
 
     .text{
@@ -231,15 +260,14 @@
     }
 
     .grid{
-        z-index: -1;
-        height: 50%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
 
     .gridItem{
-        width:100%;
-        height: auto;
+        width:310px;
+        height:auto;
+        object-fit:contain;
     }
   }
 

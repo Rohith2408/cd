@@ -33,12 +33,13 @@ const Section5=()=>{
 const Questioncontainer=(props:{q:string,a:string})=>{
 
     const [scale,setScale]=useState(0)
+    const [rotate,setRotate]=useState("0deg")
 
     return(
         <div className={styles.qaWrapper}>
             <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start",alignItems:"center"}}>
-                <button onClick={()=>setScale(scale==0?1:0)} className={styles.qWrapper}>
-                    <img src={dropdownicon} className={styles.dropdown} style={{transform:"rotate("+(scale==0)?"180deg":"0deg"+")"}}></img>
+                <button onClick={()=>{setRotate(scale==0?"0deg":"180deg");setScale(scale==0?1:0)}} className={styles.qWrapper}>
+                    <img src={dropdownicon} className={styles.dropdown} style={{transform: `rotate(${rotate}deg)`}}></img>
                 </button>
                 <p className={styles.question}>{props.q}</p>
             </div>
