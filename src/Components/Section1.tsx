@@ -17,7 +17,7 @@ const Section1=()=>{
         <section className={styles.mainwrapper} id="section2" data-scroll-to="section2">
             <div className={styles.subwrapper}>
                 <div className={styles.bodyWrapper}>
-                    <div className={styles.grid}>
+                    {/* <div className={styles.grid}>
                         <Griditem index={0}></Griditem>
                         <Griditem index={1}></Griditem>
                         <Griditem index={2}></Griditem>
@@ -27,7 +27,7 @@ const Section1=()=>{
                         <Griditem index={6}></Griditem>
                         <Griditem index={7}></Griditem>
                         <Griditem index={8}></Griditem>
-                    </div>
+                    </div> */}
                     <div className={styles.body}>
                         <img className={styles.gif} src={cd_gif} ></img>
                         <div className={styles.titleWrapper}>
